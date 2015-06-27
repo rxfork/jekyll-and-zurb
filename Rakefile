@@ -124,8 +124,8 @@ task deploy: [:build] do
   end
 end
 
-# rake travis
-Rake::Jekyll::GitDeployTask.new(:travis) do |t|
+# rake publish
+Rake::Jekyll::GitDeployTask.new(:publish) do |t|
   t.description = 'Generate the site and push changes to remote repository'
 
   t.deploy_branch = -> {
@@ -136,3 +136,18 @@ Rake::Jekyll::GitDeployTask.new(:travis) do |t|
     Rake.sh(*build_site_command(dest_dir, ENV['STAGING_URL'].to_s))
   }
 end
+
+# rake travis_env
+desc 'Prepare the Travis CI build environment'
+task :travis_env do
+  # Setup the deploy key.
+  puts 'Adding deploy key.'
+  verbose false do
+    sh 'chmod 600 .deploy_key'
+    sh 'ssh-add .deploy_key'
+  end
+end
+
+# rake travis
+desc 'Generate site from Travis CI and publish site to GitHub Pages'
+task travis: [:travis_env, :publish]
