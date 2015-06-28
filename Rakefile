@@ -155,7 +155,6 @@ task :travis_env do
 
   if File.exists? '.deploy_key'
     sh 'chmod 600 .deploy_key'
-    sh 'ssh-add .deploy_key'
   end
 end
 
