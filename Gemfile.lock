@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/jirutka/rake-jekyll.git
   revision: 1f298b2ddb36fd16b92a6f9e40729464a3114656
+  ref: 1f298b2
   specs:
     rake-jekyll (1.0.4)
       rake (~> 10.0)
@@ -158,7 +159,7 @@ DEPENDENCIES
   jekyll-assets (~> 0.14.0)
   mini_magick (~> 4.2.0)
   rake (~> 10.4.2)
-  rake-jekyll (~> 1.0.3)!
+  rake-jekyll!
   uglifier (~> 2.7.0)
 
 BUNDLED WITH

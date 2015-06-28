@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Development dependencies
 gem 'rake', '~> 10.4.2'
-gem 'rake-jekyll', '~> 1.0.3', github: 'jirutka/rake-jekyll'
+gem 'rake-jekyll', github: 'jirutka/rake-jekyll', ref: '1f298b2'
 gem 'guard-livereload', '~> 2.4.0'
 
 # Jekyll
