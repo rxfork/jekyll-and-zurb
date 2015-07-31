@@ -1,7 +1,6 @@
 GIT
   remote: git://github.com/jirutka/rake-jekyll.git
-  revision: 1f298b2ddb36fd16b92a6f9e40729464a3114656
-  ref: 1f298b2
+  revision: dcef615e256575bba93cd152b3d78c8b9975a227
   specs:
     rake-jekyll (1.0.4)
       rake (~> 10.0)
